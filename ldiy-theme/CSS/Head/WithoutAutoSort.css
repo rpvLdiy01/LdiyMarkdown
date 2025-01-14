@@ -1,0 +1,240 @@
+@import url("../../Resource/Fonts/ldiy-font.css");
+
+/* —————————————————————————————————————————————————————— H1 —————————————————————————————————————————————————————— */
+h1 {
+    /* 字体约束 */
+    font-family: '拼音楷书一级标题';
+    font-size: 2.2rem;
+    font-weight: normal; /* 字体样式，譬如常规、加粗、斜体等 */
+    color :black;
+
+    /* 一级标题自左向右 */
+    text-align: center;
+
+    /* 将一级标题设置为发光效果 */
+    /* color: #ffffff; */
+    /* text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000, 0 0 30px #ff0000, 0 0 40px #ff0000; */
+}
+
+h1::before,
+h1::after {
+    position: static;
+    display: block;
+    content: '';
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: auto 80%;
+    width: 100%;
+    z-index: 1;
+    border: 0;
+    margin: 0 0;
+    padding: 20px 30px;
+}
+h1::before {
+    background-image: url("../../Resource/Image/DecorateImage/WritePageH1Title-Head.png");
+}
+h1::after {
+    background-image: url("../../Resource/Image/DecorateImage/WritePageH1Title-Tail.png");
+}
+
+/* —————————————————————————————————————————————————————— H2 —————————————————————————————————————————————————————— */
+h2 {
+    font-family: '翰林馆阁体';
+    font-size: 2rem;
+    font-weight: normal;
+    color: black;
+
+    display: flex;
+    align-items: center;
+}
+h2::before {
+    content: 'h.2';
+    font-family: 'LinotteSemiBold';
+    font-size: 0.8em;
+    /**
+    * 设计：我想法是标题设计为一个银戳
+    * #c0c0c0是亮银色，作为背景
+    * rgb(255, 215, 0)是亮金色，作为字体颜色，显示华贵
+    **/
+    background-color: rgb(192, 192, 192); /* 标题是亮银色的基色背景 */
+    color: rgb(0, 0, 0);
+
+    border-style: solid;
+    border-width: 2px;
+    border-color: rgb(0, 0, 0);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+
+    /* position: relative; */
+
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    margin-right: 11px;
+
+    padding-top: 1px;
+    padding-bottom: 1px;
+    padding-left: 1px;
+    padding-right: 1px;
+
+    /* 按照2级标题所占的行块，基线对齐 */
+    vertical-align: baseline;
+}
+
+/* —————————————————————————————————————————————————————— H3 —————————————————————————————————————————————————————— */
+h3 {
+    font-family: '翰林馆阁体';
+    font-size: 1.8rem;
+    font-weight: normal;
+    color: black;
+
+    display: flex;
+    align-items: center;
+}
+h3::before {
+    content: 'h.3';
+    font-family: 'LinotteSemiBold';
+    font-size: 0.8em;
+
+    background-color: rgb(192, 192, 192);
+    color: rgb(0, 0, 0);
+
+    border-style: solid;
+    border-width: 2px;
+    border-color: rgb(0, 0, 0);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+
+    /* position: relative; */
+
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    margin-right: 11px;
+
+    padding-top: 1px;
+    padding-bottom: 1px;
+    padding-left: 1px;
+    padding-right: 1px;
+}
+
+/* —————————————————————————————————————————————————————— H4 —————————————————————————————————————————————————————— */
+h4 {
+    font-family: '翰林馆阁体';
+    font-size: 1.7rem;
+    font-weight: normal;
+    color: black;
+
+    display: flex;
+    align-items: center;
+}
+h4::before {
+    content: 'H4';
+    font-family: 'LinotteSemiBold';
+    font-size: 0.8em;
+
+    background-color: rgb(192, 192, 192);
+    color: rgb(0, 0, 0);
+
+    border-style: solid;
+    border-width: 2px;
+    border-color: rgb(0, 0, 0);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+
+    /* position: relative; */
+
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    margin-right: 11px;
+
+    padding-top: 1px;
+    padding-bottom: 1px;
+    padding-left: 1px;
+    padding-right: 1px;
+}
+
+/* —————————————————————————————————————————————————————— H5 —————————————————————————————————————————————————————— */
+h5 {
+    font-family: '翰林馆阁体';
+    font-size: 1.6rem;
+    font-weight: normal;
+    color: black;
+
+    display: flex;
+    align-items: center;
+}
+h5::before {
+    content: 'H5';
+    font-family: 'LinotteSemiBold';
+    font-size: 0.8em;
+
+    background-color: rgb(192, 192, 192);
+    color: rgb(0, 0, 0);
+
+    border-style: solid;
+    border-width: 2px;
+    border-color: rgb(0, 0, 0);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+
+    /* position: relative; */
+
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    margin-right: 11px;
+
+    padding-top: 1px;
+    padding-bottom: 1px;
+    padding-left: 1px;
+    padding-right: 1px;
+}
+
+/* —————————————————————————————————————————————————————— H6 —————————————————————————————————————————————————————— */
+h6 {
+    font-family: '翰林馆阁体';
+    font-size: 1.5rem;
+    font-weight: normal;
+    color: black;
+
+    display: flex;
+    align-items: center;
+}
+h6::before {
+    content: 'H6';
+    font-family: 'LinotteSemiBold';
+    font-size: 0.8em;
+
+    background-color: rgb(192, 192, 192);
+    color: rgb(0, 0, 0);
+
+    border-style: solid;
+    border-width: 2px;
+    border-color: rgb(0, 0, 0);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+
+    /* position: relative; */
+
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    margin-right: 11px;
+
+    padding-top: 1px;
+    padding-bottom: 1px;
+    padding-left: 1px;
+    padding-right: 1px;
+}

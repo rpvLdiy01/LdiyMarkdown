@@ -1,0 +1,117 @@
+@import url("../../Resource/Fonts/ldiy-font.css");
+
+#write {
+    counter-reset: h1;
+}
+
+/* —————————————————————————————————————————————————————— 1~6级标题 —————————————————————————————————————————————————————— */
+h1 {
+    /* 字体约束 */
+    font-family: 'ldiy-FireCode', '思源等宽-Normal';
+    font-size: 2.2rem;
+    font-weight: normal; /* 字体样式，譬如常规、加粗、斜体等 */
+    color :black;
+
+    /* 一级标题自左向右 */
+    text-align: left;
+
+    /* 将一级标题设置为发光效果 */
+    /* color: #ffffff; */
+    /* text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000, 0 0 30px #ff0000, 0 0 40px #ff0000; */
+}
+h2 {
+    font-family: 'ldiy-Hack', '思源等宽-Normal';
+    font-size: 2rem;
+    font-weight: normal;
+    color: black;
+}
+h3 {
+    font-family: 'ldiy-Hack', '思源等宽-Normal';
+    font-size: 1.8rem;
+    font-weight: normal;
+    color: black;
+}
+h4 {
+    font-family: 'ldiy-Hack', '思源等宽-Normal';
+    font-size: 1.7rem;
+    font-weight: normal;
+    color: black;
+}
+h5 {
+    font-family: 'ldiy-Hack', '思源等宽-Normal';
+    font-size: 1.6rem;
+    font-weight: normal;
+    color: black;
+}
+h6 {
+    font-family: 'ldiy-Hack', '思源等宽-Normal';
+    font-size: 1.5rem;
+    font-weight: normal;
+    color: black;
+}
+
+/* —————————————————————————————————————————————————————— 6级标题自动编号 —————————————————————————————————————————————————————— */
+#write h1 {
+    counter-reset: h2;
+}
+#write h2 {
+    counter-reset: h3;
+}
+#write h3 {
+    counter-reset: h4;
+}
+#write h4 {
+    counter-reset: h5;
+}
+#write h5 {
+    counter-reset: h6;
+}
+#write h1:before {
+    counter-increment: h1;
+    content: "第" counter(h1) "篇->";
+}
+#write h2:before {
+    counter-increment: h2;
+    content: counter(h1) "." counter(h2) " ";
+}
+#write h3:before {
+    counter-increment: h3;
+    content: counter(h1) "." counter(h2) "." counter(h3) " ";
+}
+#write h4:before {
+    counter-increment: h4;
+    content: counter(h1) "." counter(h2) "." counter(h3) "." counter(h4) " ";
+}
+#write h5:before {
+    counter-increment: h5;
+    content: counter(h1) "." counter(h2) "." counter(h3) "." counter(h4) "." counter(h5) " ";
+}
+#write h6:before {
+    counter-increment: h6;
+    content: counter(h1) "." counter(h2) "." counter(h3) "." counter(h4) "." counter(h5) "." counter(h6) " ";
+}
+
+/* —————————————————————————————————————————————————————— 标题特效组 —————————————————————————————————————————————————————— */
+
+/* 2级标题的下线 */
+#write h2::after {
+    content: " ";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    background: linear-gradient(to right, rgb(136, 133, 133), rgba(148, 4, 4, 0));
+}
+
+/* 3 4 5 6级标题点击后的前缀提示图标 */
+#write>h3.md-focus:before,
+#write>h4.md-focus:before,
+#write>h5.md-focus:before,
+#write>h6.md-focus:before {
+    width: auto;
+    height: auto;
+    background-color: black;
+    color: white;
+}

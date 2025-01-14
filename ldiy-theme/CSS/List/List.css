@@ -1,0 +1,85 @@
+/* ----- ----- #write页面的list ----- ----- */
+#write ul li,
+#write ol li,
+#write .ul .li,
+#write .ol .li {
+    list-style-type: none;
+    margin-top: 7px;
+    margin-bottom: 7px;
+}
+
+/* 列表子项上下间隔调整 */
+#write ul li input,
+#write ol li input,
+#write .ul .li input,
+#write .ol .li input {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+#write ul>li:not(.tab):before,
+#write .ul>.li:not(.tab):before {
+    margin-left: -22px;
+    margin-top: 10px;
+    width: .62em;
+    height: .62em;
+    border: .1em solid #81d8cf;
+    border-radius: .31em;
+    background: 0 0;
+    content: '';
+    line-height: .42em;
+}
+
+#write ul>li:not(.tab):hover:before,
+#write .ul>.li:not(.tab):hover:before{
+    border-color: #81d8cf;
+}
+
+#write ol li:before,
+#write ul li:before,
+#write .ol .li:before,
+#write .ul .li:before {
+    position: absolute;
+    background: #81d8cf;
+    color: black;
+    cursor: pointer;
+    -webkit-transition: all .3s ease-out;
+    -moz-transition: all .3s ease-out;
+    -o-transition: all .3s ease-out;
+    -ms-transition: all .3s ease-out;
+    transition: all .3s ease-out;
+}
+
+#write ol li:hover:before,
+#write ul li:hover:before,
+#write .ol .li:hover:before,
+#write .ul .li:hover:before {
+    -webkit-transform:rotate(360deg);
+    -moz-transform:rotate(360deg);
+    -o-transform:rotate(360deg);
+    -ms-transform:rotate(360deg);
+    transform:rotate(360deg);
+}
+
+#write ol li:first-child,
+#write .ol .li:first-child {
+    counter-reset: li;
+}
+#write ol>li:before,
+#write .ol>.li:before {
+    margin-top: 6px;
+    margin-left: -25px;
+
+    width: 1.65em;
+    height: 1.65em;
+
+    border-radius: 0.825em;
+
+    content: counter(li);
+    counter-increment: li;
+
+    text-align: center;
+    font-size: .65em;
+
+    line-height: 1.7em;
+}

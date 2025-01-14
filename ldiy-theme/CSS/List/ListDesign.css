@@ -1,0 +1,13 @@
+/* 有序列表 */
+#write ol {
+    list-style-type: upper-roman;
+    color: blue;
+    font-size: 20px;
+}
+
+/* 无序列表 */
+#write ul {
+    list-style-type: circle;
+    color: red;
+    font-size: 20px;
+}

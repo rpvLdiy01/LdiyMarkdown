@@ -1,0 +1,145 @@
+@import url("../../Resource/Fonts/ldiy-font.css");
+
+/* —————————————————————————————————————————————————————— 侧边栏：整体样式 —————————————————————————————————————————————————————— */
+#typora-sidebar {
+    display: block;
+    left: -30000px;
+    top: 0;
+    bottom: 0;
+    transition: .3s;
+    box-shadow: none;
+    position: fixed;
+
+    /* 35px的曲度正正好 */
+    border-top-left-radius: 35px;
+    border-top-right-radius: 35px;
+
+    /* 毛玻璃效果 */
+    background-color: rgba(192, 192, 192, 0.8);
+    border-style: solid 1px;
+
+    font-family: 'ldiy-Hack', '思源等宽-Normal';
+    font-size: 1.0rem;
+}
+
+.sidebar-content {
+    counter-reset: h1
+}
+.outline-h1 {
+    counter-reset: h2
+}
+.outline-h2 {
+    counter-reset: h3
+}
+.outline-h3 {
+    counter-reset: h4
+}
+.outline-h4 {
+    counter-reset: h5
+}
+.outline-h5 {
+    counter-reset: h6
+}
+
+.outline-h1>.outline-item>.outline-label:before {
+    counter-increment: h1;
+    content: counter(h1) " ";
+}
+.outline-h2>.outline-item>.outline-label:before {
+    counter-increment: h2;
+    content: counter(h1) "." counter(h2)" ";
+}
+.outline-h3>.outline-item>.outline-label:before {
+    counter-increment: h3;
+    content: counter(h1) "." counter(h2) "." counter(h3) " ";
+}
+.outline-h4>.outline-item>.outline-label:before {
+    counter-increment: h4;
+    content: counter(h1) "." counter(h2) "." counter(h3) "." counter(h4) " ";
+}
+.outline-h5>.outline-item>.outline-label:before {
+    counter-increment: h5;
+    content: counter(h1) "." counter(h2) "." counter(h3) "." counter(h4) "." counter(h5) " ";
+}
+.outline-h6>.outline-item>.outline-label:before {
+    counter-increment: h6;
+    content: counter(h1) "." counter(h2) "." counter(h3) "." counter(h4) "." counter(h5) "." counter(h6) " ";
+}
+
+/* —————————————————————————————————————————————————————— 侧边栏：大纲线 —————————————————————————————————————————————————————— */
+.outline-item-open.outline-h1.outline-item-wrapper li::before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 2px;
+    background-color: rgb(0, 0, 0);
+    left: 8.5px;
+    z-index: 99;
+}
+.outline-item-open.outline-h2.outline-item-wrapper li::before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 2px;
+    background-color: rgb(0, 0, 0);
+    left: 32.5px;
+    z-index: 99;
+}
+.outline-item-open.outline-h3.outline-item-wrapper li::before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 2px;
+    background-color: rgb(0, 0, 0);
+    left: 56.5px;
+    z-index: 99;
+}
+.outline-item-open.outline-h4.outline-item-wrapper li::before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 2px;
+    background-color: rgb(0, 0, 0);
+    left: 80.5px;
+    z-index: 99;
+}
+.outline-item-open.outline-h5.outline-item-wrapper li::before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 2px;
+    background-color: rgb(0, 0, 0);
+    left: 104.5px;
+    z-index: 99;
+}
+.outline-h2>.outline-item {
+    padding-left: 1em; /* 参考值1.5em */
+}
+.outline-h3>.outline-item {
+    padding-left: 2.5em; /* 参考值3.0em */
+}
+.outline-h4>.outline-item {
+    padding-left: 4.4em;
+}
+.outline-h5>.outline-item {
+    padding-left: 6.0em;
+}
+.outline-h6>.outline-item {
+    padding-left: 8em;
+}
+.outline-item-open.outline-h2.outline-item-wrapper li {
+    border: none !important;
+}
+
+/* —————————————————————————————————————————————————————— 侧边栏：搜索框 —————————————————————————————————————————————————————— */
+#file-library-search-input {
+    width: 100%;
+    height: 24px;
+    border-radius: 4px;
+}
+
+/* —————————————————————————————————————————————————————— 侧边栏：调整"文件"和"大纲" —————————————————————————————————————————————————————— */
+.info-panel-tab-title {
+    font-family: '手札体之顺风顺水' !important;
+    font-size: 20px;
+}

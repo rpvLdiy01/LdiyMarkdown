@@ -1,0 +1,105 @@
+@import url('ldiy-theme/CSS/Write/BaseProfile.css');
+
+@import url('ldiy-theme/CSS/SideBar/BaseProfile.css');
+
+@import url('ldiy-theme/CSS/Head/BaseProfile.css');
+
+@import url('ldiy-theme/CSS/CodeFence/BaseProfile.css');
+
+@import url('ldiy-theme/CSS/List/BaseProfile.css');
+
+@import url('ldiy-theme/CSS/Table/BaseProfile.css');
+
+/**
+  :root伪类选择器作用->这是HTML中特殊的选择器，对应的是<html>标签，这是最顶级的父类标签、
+  :root的优先级->最高优先级
+  :root常用场景-> √设置一些变量var
+                 √设置网页的全局背景图
+ **/
+:root {
+    /* 变量区 */
+    --background-image: url("ldiy-theme/Resource/Image/HTMLImage/FantasyWorld.jpg");
+    background: var(--background-image);
+
+    background-size: cover; /* 背景图基于容器大小伸缩 */
+    background-repeat: no-repeat; /* 背景图不平铺 */
+    background-position: center center; /* 背景图在水平方向和垂直方向均居中 */
+    background-attachment: fixed; /* 图片的高度相对于视图窗口固定 */
+
+    cursor: pointer;
+}
+
+/* —————————————————————————————————————————————————————— 置顶ctrl+f：搜索框 —————————————————————————————————————————————————————— */
+#md-searchpanel {
+    background-color: rgb(192, 192, 192);
+
+    border-top-left-radius: 1em;
+    border-top-right-radius: 1em;
+    border-bottom-left-radius: 1em;
+    border-bottom-right-radius: 1em;
+
+    color: rgb(0, 0, 0);
+}
+#md-searchpanel input {
+    border-radius: 1em;
+    border: 1px solid black;
+    color: red;
+}
+#md-searchpanel .btn {
+    font-size: 13px;
+    color: rgb(0, 0, 0);
+    font-weight: bolder;
+}
+
+/* —————————————————————————————————————————————————————— 偏好界面 —————————————————————————————————————————————————————— */
+#root .window {
+    background-color: white;
+    font-family: 'ldiy-Hack', '思源等宽-Bold';
+}
+
+/* —————————————————————————————————————————————————————— 段落 —————————————————————————————————————————————————————— */
+p {
+    font-family: 'ldiy-FireCode', '手写-可爱园';
+    font-weight: normal;
+    font-size: 1.5rem;
+    color: #000000;
+}
+
+/* —————————————————————————————————————————————————————— 引用 —————————————————————————————————————————————————————— */
+blockquote {
+    margin: 0.5rem 0rem 1.5rem 0rem;
+    width: 100%;
+    border-left: 4px solid #3884ff;
+    border-right: 4px solid #f5f7f9;
+    border-radius: 0.3rem;
+    padding: 1rem;
+    padding-right: 0;
+    background-color: rgba(98, 166, 230, 0.363);
+}
+
+/* —————————————————————————————————————————————————————— 高亮 —————————————————————————————————————————————————————— */
+mark { /* mark选择器：配置高亮，即：==内容== */
+    background: rgb(255, 95, 87);
+    color: rgb(255, 255, 255);
+    font-weight: bolder;
+}
+
+/* —————————————————————————————————————————————————————— 图片 —————————————————————————————————————————————————————— */
+.md-image {
+    display: inline-block;
+    overflow: hidden;
+    border-radius: 10px;
+    padding: 10px;
+}
+.md-image img {
+    width: 800px;
+    height: auto;
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.8),
+                0 0 20px rgba(0, 255, 0, 0.7),
+                0 0 30px rgba(0, 0, 255, 0.6);
+}
+
+/* —————————————————————————————————————————————————————— 鼠标选中部分高亮 —————————————————————————————————————————————————————— */
+::selection {
+    background-color: red !important;
+}

@@ -1,0 +1,78 @@
+/**
+ * 附注1：不要在src里面乱加format属性，如果要加，也要确认好这个字体的格式是什么，注意不是文件后缀名
+ *     譬如：ttf->format('truetype')，而不能是format('ttf')
+ *     填错了，浏览器不加载这个字体文件
+**/
+
+/* —————————————————————————————————————————————————————— English —————————————————————————————————————————————————————— */
+@font-face {
+    font-family: 'ldiy-FireCode';
+    src: url("English/FiraCode/FiraCode-1-Regular.ttf");
+}
+
+@font-face {
+    font-family: 'ldiy-Hack';
+    src: url("English/Hack/Hack-1-Regular.ttf"),
+        url("English/Hack/Hack-2-Bold.ttf"),
+        url("English/Hack/Hack-3-Italic.ttf"),
+        url("English/Hack/Hack-4-BoldItalic.ttf");
+}
+
+@font-face {
+    font-family: 'Monaco';
+    src: url("English/Monaco/Monaco.ttf");
+}
+
+@font-face {
+    font-family: 'LinotteSemiBold';
+    src: url("English/LinotteSemiBold/LinotteSemiBold.otf");
+}
+
+/* —————————————————————————————————————————————————————— 汉文 —————————————————————————————————————————————————————— */
+@font-face {
+    font-family: '思源等宽-Normal';
+    src:url('Chinese/思源等宽/SourceHanMonoSC-Normal.otf');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: '思源等宽-Bold';
+    src: url('Chinese/思源等宽/SourceHanMonoSC-Bold.otf');
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: '手写-可爱园';
+    src: url('Chinese/手写-可爱园/AaRiFuYiRiKeAiYuan.ttf');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: '手札体之顺风顺水';
+    src: url('Chinese/手札体之顺风顺水/AaShunFengShunShuiShunCaiShen.ttf');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: '拼音楷书一级标题';
+    src: url('Chinese/三极楷书拼音/SanJiKaiShuPinYin.ttf');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: '空心宋楷';
+    src: url('Chinese/空心宋楷/KongXinSongKai.ttf');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: '翰林馆阁体';
+    src: url('Chinese/翰林馆阁体/AaHanLinGuanGeTi.ttf');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: '非一级标题';
+    src: url('Chinese/碑文/YanZhenQingDuoBaoTaBei.ttf');
+    font-weight: normal;
+}

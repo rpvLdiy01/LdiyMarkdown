@@ -1,0 +1,63 @@
+@import url('../../Resource/Fonts/ldiy-font.css');
+
+#write table {
+    margin: 2em 2em;
+    padding: 0;
+
+    word-break: initial;
+
+    border: 2px solid black;
+    border-spacing: 0;
+}
+
+#write table tr {
+    margin: 0;
+    padding: 0;
+}
+
+/* ---------------------------------------- 表头(表格第1行) ---------------------------------------- */
+#write table tr th {
+    font-family: 'ldiy-Hack', '思源等宽-Bold';
+    font-style: normal;
+    font-size: large;
+    color: #000000;
+
+    border: 1.5px solid #ccc;
+
+/** 第1行的底部表格线 **/
+    border-bottom: 4px solid black; 
+
+    border-top: none !important;
+
+    padding: 5px 10px;
+}
+
+/* ---------------------------------------- 表体(除表格第1行外的行) ---------------------------------------- */
+#write table tbody td {
+    font-family: 'ldiy-Hack', '思源等宽-Bold';
+    font-size: large;
+
+    background-color: rgba(235, 255, 236, 0.8);
+    border: 1.5px solid #ccc;
+    border-bottom: none;
+
+    padding: 5px 10px;
+}
+
+#write table tr th:first-child,
+#write table tr td:first-child {
+    margin-top: 0;
+    border-left-width: 0px !important;
+}
+
+#write table tr th:last-child,
+#write table tr td:last-child {
+    margin-bottom: 0;
+    border-right-width: 0px !important;
+}
+
+#write .md-table-fig,
+#write .md-table-fig:active {
+    box-shadow: 0 0 0 1.5px #ccc;
+    border-radius: 4px;
+}
